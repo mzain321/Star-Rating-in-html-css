@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>STAR</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+<style type="text/css">
+	
+body{
+	margin: 0;
+	padding: 0;
+	background: #343222;
+}
+
+.rating{
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotateY(180deg);
+	display: flex;
+}
+
+.rating input{
+	display: none;
+
+}
+
+.rating label{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+
+
+}
+
+.rating label:before{
+
+	content: '\f005';
+font-family: fontAwesome;
+position: relative;
+display: block;
+font-size: 50px;
+}
+
+.rating label:after{
+
+	content: '\f005';
+font-family: fontAwesome;
+position: absolute;
+display: block;
+font-size: 50px;
+color: #1f9cff;
+top: 0;
+opacity: 0;
+transition: .5s;
+text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after{
+opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+	<div class="rating">
+		<input type="radio" name="star" id="star1"><label for="star1"></label>
+		<input type="radio" name="star" id="star2"><label for="star2"></label>
+		<input type="radio" name="star" id="star3"><label for="star3"></label>
+		<input type="radio" name="star" id="star4"><label for="star4"></label>
+		<input type="radio" name="star" id="star5"><label for="star5"></label>
+
+</body>
+</html>
